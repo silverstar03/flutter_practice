@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'pakage:cloud_firestore/cloud_firestore.dart';
 
 import 'profile_modify.dart';
 import 'profile.dart';
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: Myprofile(),
-      home: CloudStorageDemo(),
+      home: Myprofile(),
+      // home: profile_modify(),
     );
   }
 }
