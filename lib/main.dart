@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'profile_modify.dart';
 import 'profile.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Myprofile(),
+      home: RegistProfile(),
       // home: profile_modify(),
     );
   }
@@ -65,15 +66,12 @@ class _MyprofileState extends State<Myprofile> {
       padding: EdgeInsets.all(10),
       color: Colors.black12,
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            TextFormField(
-              decoration:InputDecoration(
-                labelText: '전화번호',
-                hintText: '전화번호',
-                border: OutlineInputBorder(),
+            Text('전화번호',
+              style: TextStyle(
+                letterSpacing: 2.0,
               ),
-              keyboardType:TextInputType.number,
             ),
             SizedBox(
               height:16.0,
