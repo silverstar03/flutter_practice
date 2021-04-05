@@ -24,10 +24,11 @@ dependencies:
   flutter:
     sdk: flutter
   image_picker: ^0.7.3
-#  firebase_storage: ^8.0.1
-#  cloud_firestore: ^1.0.3
+  firebase_storage: ^8.0.1
+#  cloud_firestore: ^1.0.3 #파이어 베이스와의 연동, 기능을 사용하는 라이브러리
 #  firebase_auth: any
-#  firebase_core: ^1.0.2
+#  firebase_core: ^1.0.2 #이니셜라이즈,,?
+#  provider: ^5.0.0
 
 
   # The following adds the Cupertino Icons font to your application.

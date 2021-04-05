@@ -56,9 +56,9 @@ class _RegistProfileState extends State<RegistProfile> {
       )
     );
   }
-  
+
   Widget nameTextField(){
-    
+
   }
 
   Widget bottomSheet(){

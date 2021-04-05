@@ -1,11 +1,13 @@
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-// import 'pakage:cloud_firestore/cloud_firestore.dart';
+
 
 import 'profile_modify.dart';
-import 'profile.dart';
+import 'chatting.dart';
 
-
-void main() {
+void main() async{
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -34,7 +36,7 @@ class _MyprofileState extends State<Myprofile> {
   Widget _buildAll(){
     return SingleChildScrollView(
       child: Container(
-          color: Colors.amberAccent,
+          // color: Colors.amberAccent,
           height: 700,
           padding : const EdgeInsets.all(16.0),
           child: Column(
