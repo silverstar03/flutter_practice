@@ -78,11 +78,9 @@ class _MyprofileState extends State<Myprofile> {
             SizedBox(
               height:16.0,
             ),
-            TextFormField(
-              decoration:InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'e-mail',
-                hintText: '이메일',
+            Text('이메일',
+              style: TextStyle(
+                letterSpacing: 2.0,
               ),
             ),
             SizedBox(
