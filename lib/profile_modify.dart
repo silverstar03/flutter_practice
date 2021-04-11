@@ -10,7 +10,7 @@ class profile_modify extends StatelessWidget {
     return SingleChildScrollView (
       child:Container(
         padding: EdgeInsets.all(10),
-        color: Colors.black12,
+        color: Colors.white,
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[

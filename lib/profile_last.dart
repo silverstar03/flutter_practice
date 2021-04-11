@@ -1,4 +1,5 @@
 // import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'profile_modify.dart';
 
@@ -33,17 +34,16 @@ class _MyprofileState extends State<Myprofile2> {
   Widget _buildAll(){
     return SingleChildScrollView(
       child: Container(
-        // color: Colors.amberAccent,
-          height: 700,
-          padding : const EdgeInsets.all(16.0),
+          height: 600,
+          // padding : const EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
               Expanded(
-                flex: 1,
+                flex: 2,
                 child: _buildTop(),
               ),
               Expanded(
-                flex: 2,
+                flex: 5,
                 child: _buildBottom(),
               )
             ],
@@ -71,40 +71,39 @@ class _MyprofileState extends State<Myprofile2> {
 
   Widget _buildBottom(){
     return Container(
-      padding: EdgeInsets.all(10),
-      color: Colors.black12,
+      padding: EdgeInsets.all(5),
+      color: Colors.white,
       child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ListTile(
-                leading: Icon(Icons.call),
-                title: Text(
-                  '전화번호',
-                ),
+              title: Text('전화번호'),
+              subtitle: Text('010-1234-5678'),
+              leading: Icon(Icons.call),
+              // contentPadding: EdgeInsets.all(55.0)
             ),
             Divider(),
             ListTile(
-                leading: Icon(Icons.mail),
-                title: Text(
-                  '메일',
-                ),
+              leading: Icon(Icons.mail),
+              title: Text('메일'),
+              subtitle: Text('s2019s99@e-mirim.hs.kr'),
             ),
             Divider(),
             ListTile(
-                leading: Icon(Icons.location_on),
-                title: Text(
-                  '위치',
-                ),
+              leading: Icon(Icons.location_on),
+              title: Text('위치',),
+              subtitle: Text('3층 301호'),
             ),
             Divider(),
             ListTile(
-                leading: Icon(Icons.work_outlined),
-                title: Text(
-                  '맡은 업무',
-                ),
+              leading: Icon(Icons.work_outlined),
+              title: Text('맡은 업무'),
+              subtitle: Text('마케팅 부서 팀장'),
             ),
+            Divider(),
             SizedBox(
-              height:16.0,
+              height:5.0,
             ),
             RaisedButton(
                 child: Text('프로필 편집'),
@@ -135,8 +134,6 @@ class _MyprofileState extends State<Myprofile2> {
       body: _buildAll(),
     );
   }
-
-
 }
 
 
