@@ -1,17 +1,14 @@
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-
 import 'profile_modify.dart';
-import 'profile_last.dart';
 
-void main() async{
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
-  runApp(MyApp2());
-}
+// void main() async{
+//   // WidgetsFlutterBinding.ensureInitialized();
+//   // await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
 
-class MyApp extends StatelessWidget {
+class MyApp2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,23 +17,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Myprofile(),
+      home: Myprofile2(),
       // home: profile_modify(),
     );
   }
 }
 
-class Myprofile extends StatefulWidget {
+class Myprofile2 extends StatefulWidget {
   @override
   _MyprofileState createState() => _MyprofileState();
 }
 
-class _MyprofileState extends State<Myprofile> {
+class _MyprofileState extends State<Myprofile2> {
 
   Widget _buildAll(){
     return SingleChildScrollView(
       child: Container(
-          // color: Colors.amberAccent,
+        // color: Colors.amberAccent,
           height: 700,
           padding : const EdgeInsets.all(16.0),
           child: Column(
@@ -57,9 +54,18 @@ class _MyprofileState extends State<Myprofile> {
 
   Widget _buildTop(){
     return Container(
-      padding: EdgeInsets.all(10),
-      color: Colors.blue,
-
+      child: Column(
+          children: <Widget>[
+          UserAccountsDrawerHeader(
+              accountName: Text('Name'),
+              accountEmail: Text('Username'),
+              currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text('Hi'),
+              ),
+          ),
+          ]
+      )
     );
   }
 
@@ -68,38 +74,34 @@ class _MyprofileState extends State<Myprofile> {
       padding: EdgeInsets.all(10),
       color: Colors.black12,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('전화번호',
-              style: TextStyle(
-                letterSpacing: 2.0,
-              ),
+            ListTile(
+                leading: Icon(Icons.call),
+                title: Text(
+                  '전화번호',
+                ),
             ),
-            SizedBox(
-              height:16.0,
+            Divider(),
+            ListTile(
+                leading: Icon(Icons.mail),
+                title: Text(
+                  '메일',
+                ),
             ),
-            Text('이메일',
-              style: TextStyle(
-                letterSpacing: 2.0,
-              ),
+            Divider(),
+            ListTile(
+                leading: Icon(Icons.location_on),
+                title: Text(
+                  '위치',
+                ),
             ),
-            SizedBox(
-              height:16.0,
-            ),
-            TextFormField(
-              decoration:InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: '위치',
-              ),
-            ),
-            SizedBox(
-              height:16.0,
-            ),
-            TextFormField(
-              decoration:InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: '맡은 업무',
-              ),
+            Divider(),
+            ListTile(
+                leading: Icon(Icons.work_outlined),
+                title: Text(
+                  '맡은 업무',
+                ),
             ),
             SizedBox(
               height:16.0,
